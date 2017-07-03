@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-lazy="false" package="entity">
+	<class name="Hibernate" table="SSH">
+		    <id name="id" type="int" column="id">
+      <generator class="native"/>
+    </id> 
+		
+		<property name="photo" type="java.sql.Blob">
+			<column name="photo" />
+		</property>
+<property name="num" type="int">
+			<column name="num" />
+		</property>
+
+	</class>
+	
+	<class name="Login" table="USERDETAILS">
+		<id name="id" type="integer">
+			<column name="id" />
+			<generator class="increment" />
+		</id>
+
+		<property name="username" type="string">
+			<column length="15" name="username" not-null="true" />
+		</property>
+
+		<property name="password" type="string">
+			<column length="15" name="password" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>
