@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="GBK" />
+
+	<package name="default" extends="struts-default">
+
+		<action name="login" class="user" method="login">
+			<result name="input">/index.jsp</result>
+			<result name="success">/welcome.html</result>
+		</action>
+<action name="execute1" class="user" method="execute1">
+			<result name="success">/test2.jsp</result>
+		</action>
+		<action name="logout" class="user" method="logout">
+			<result name="success">/index.jsp</result>
+		</action>
+
+		<action name="regist" class="user" method="regist">
+			<result name="input">/index.jsp</result>
+			<result name="success">/welcome.html</result>
+		</action>
+		<action name="UserAction" class="userAction" method="execute">
+		</action>
+
+	</package>
+</struts>
